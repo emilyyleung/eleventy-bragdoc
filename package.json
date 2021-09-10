@@ -1,0 +1,26 @@
+{
+  "name": "eleventy-bragdoc",
+  "version": "1.0.0",
+  "description": "Eleventy theme based on Bragdoc by Jonny Burch and Neil Cameron",
+  "main": "index.js",
+  "dependencies": {
+    "@11ty/eleventy": "^0.12.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "eleventy --serve",
+    "build": "eleventy",
+    "deploy": "gh-pages -d public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/emilyyleung/eleventy-bragdoc.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/emilyyleung/eleventy-bragdoc/issues"
+  },
+  "homepage": "/"
+}

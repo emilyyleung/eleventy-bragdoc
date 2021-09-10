@@ -1,0 +1,35 @@
+---
+layout: layouts/base.njk
+title: home
+---
+
+{% include 'partials/site-head.html' %}
+
+<div class="ibox-content" id="ibox-content">
+
+    <div id="vertical-timeline" class="vertical-container dark-timeline ">
+
+    	{% for post in collections.posts | reverse %}
+
+        <div class="vertical-timeline-block">
+            <div class="vertical-timeline-icon navy-bg">
+            	<div class="blob"></div>
+            </div>
+
+            <div class="vertical-timeline-content">
+                <span class="vertical-date">
+                    <small>{{ post.data.date | dateDisplay }}</small>
+                </span>
+                <br/>
+                <h2><b>{{ post.data.icon }} {{ post.data.name }}</b></h2>
+                <div class="postcontent">
+                {{ post.templateContent | safe }}
+                </div>
+            </div>
+        </div>
+
+        {%- endfor %}
+
+    </div>
+
+</div>

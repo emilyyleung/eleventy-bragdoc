@@ -1,0 +1,170 @@
+body {
+	font-family: "open sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	background-color: #fff;
+	font-size: 13px;
+	color: #676a6c;
+	overflow-x: hidden;
+}
+
+.ibox-content {
+	padding-bottom: 5em;
+}
+
+img {
+	width: 100%;
+	padding-top: 1em;
+	padding-bottom: 1em;
+}
+
+a {
+	color: grey;
+}
+
+a:hover {
+	color: purple;
+}
+
+blockquote {
+	border-left: 3px solid purple;
+	padding-left: 1em;
+	line-height: 2em;
+	font-style: italic;
+}
+
+blockquote > p {
+	margin-bottom: 1em;
+	padding: 0;
+}
+
+pre > code {
+	display: inline-block; 
+    width: 100px; /* Whatever. The <code>'s width will change */
+	font-family: 'Roboto Mono', monospace;
+	padding: 1em;
+}
+
+pre {
+	background: rgba(0,0,0,0.05);
+	color: grey;
+	display: block;
+	font-size: 0.9em;
+	overflow-x: auto;
+}
+
+p > code {
+	padding: 0.3em;
+	color: grey;
+}
+
+
+
+.vertical-container {
+	max-width: 800px;
+	margin: 0 auto;
+	padding-top: 10rem;
+	padding-bottom: 10rem;
+}
+
+.vertical-timeline-block {
+	position: relative;
+}
+
+.vertical-timeline-block:first-child {
+	margin-top: 0;
+}
+
+.vertical-timeline-block:before {
+	height: 100%;
+	position: absolute;
+	left: 0;
+	background-color: #f1f1f1;
+	color: orange;
+	width: 2px;
+	content: "";
+	top: 30px;
+}
+
+.vertical-timeline-block:last-child {
+	height: 0;
+}
+
+.blob {
+	position: absolute;
+	height: 5px;
+	width: 5px;
+	border: 2px solid #ddd;
+	background-color: #fff;
+	left: 0;
+	top: 30px;
+	margin-top: -2px;
+	margin-left: -3px;
+	border-radius: 100px;
+}
+
+.vertical-timeline-content {
+	position: relative;
+	/*margin-left: 60px;*/
+	margin-left: 2em;
+	background: white;
+	border-radius: 0.25em;
+	padding: 1em;
+}
+
+/* test */
+.vertical-timeline-content:last-child {
+	/*padding-bottom: 5em;*/
+}
+
+.vertical-timeline-content h2 {
+	font-weight: 400;
+	margin-top: 4px;
+	color: black;
+}
+
+.vertical-timeline-content .vertical-date {
+	/*float: left;*/
+	/*font-weight: 500;*/
+	line-height: 3em;
+}
+
+.vertical-date small {
+	color: rgba(0,0,0,0.25);
+	font-weight: 400;
+}
+
+@media only screen and (max-width: 768px) {
+	.vertical-container {
+		padding-left: 2em;
+		padding-right: 2em;
+	}
+
+	.vertical-timeline-content h2 {
+		font-size: 1.2em;
+	}
+
+}
+
+.postcontent > * {
+	/*margin: 0;*/
+	margin-bottom: 0.5em;
+	margin-left: 0;
+	/*padding-top: 0.75em;*/
+}
+
+.postcontent > h1 {
+	font-size: 1.2em;
+}
+
+.postcontent > h2, h3, h4, h5, h6 {
+	font-size: 1em;
+	padding-bottom: 0.5em;
+}
+
+.postcontent > ul {
+	margin: 0;
+	padding-left: 1em;
+}
+
+.postcontent > ul li li {
+	list-style: disc;
+}
