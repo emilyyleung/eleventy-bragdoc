@@ -2,7 +2,7 @@
 
 [Check out the demo](https://emilyyleung.github.io/eleventy-bragdoc)
 
-A starter site for building your own [brag document](https://jvns.ca/blog/brag-documents/), using [11ty](https://www.11ty.dev/) ([demo](https://emilyyleung.github.io/eleventy-bragdoc)). Inspired by [Julia Evans](https://jvns.ca/) . Bragdoc design by Jonny Burch and Neil Cameron at [bragdocs.com](bragdocs.com).
+A starter site for building your own [brag document](https://jvns.ca/blog/brag-documents/), using [11ty](https://www.11ty.dev/) ([demo](https://emilyyleung.github.io/eleventy-bragdoc)). Inspired by [Julia Evans](https://jvns.ca/), and [Bragdoc](bragdocs.com) design by Jonny Burch and the team at [Progression.app](https://progressionapp.com/).
 
 Built using:
 - [11ty](https://www.11ty.dev/)
