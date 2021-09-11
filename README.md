@@ -12,17 +12,22 @@ Built using:
 
 So far, I've included 2 themes (light and dark). The colours have been assigned at the beginning of `src/css/styles.css` and can be easily changed.
 
+### Light Theme
 ![light-theme](https://emilyyleung.github.io/eleventy-bragdoc/images/screenshot/light-theme.jpg)
+
+### Dark Theme
 ![dark-theme](https://emilyyleung.github.io/eleventy-bragdoc/images/screenshot/dark-theme.jpg)
 
 You can switch between them by changing the `data-theme` variable from default **light** to **dark** in `src/includes/layouts/base.njk`
-
 
 ## Features
 - [Eleventy](https://www.11ty.dev/) for static site generation
 - Nunjucks for templating
 - Static [Tags](https://www.11ty.dev/docs/collections/)
 - SEO base template can be found in `src/data/site.json`
+- Frontmatter property: `Icon` use Segoe UI Emoji inspired by Notion style
+- Frontmatter property: `public` can be set to `True` or `False` depending on whether you would like to make it visible to your timeline
+- Order is sorted with latest entry at the top
 
 ## Dependencies
 ```bash
