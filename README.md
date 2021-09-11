@@ -2,10 +2,10 @@
 
 [Check out the demo](https://emilyyleung.github.io/eleventy-bragdoc)
 
-A starter site for building your own [brag document](https://jvns.ca/blog/brag-documents/), using [11ty](https://www.11ty.dev/) ([demo](https://emilyyleung.github.io/eleventy-bragdoc)). Inspired by [Julia Evans](https://jvns.ca/), and [Bragdoc](bragdocs.com) design by Jonny Burch and the team at [Progression.app](https://progressionapp.com/).
+A starter site for building your own [brag document](https://jvns.ca/blog/brag-documents/), using [11ty](https://www.11ty.dev/) ([demo](https://emilyyleung.github.io/eleventy-bragdoc)). Inspired by [Julia Evans](https://jvns.ca/), and [Bragdocs](bragdocs.com) design by Jonny Burch and the team at [Progression.app](https://progressionapp.com/).
 
 Built using:
-- [11ty](https://www.11ty.dev/)
+- [11ty/eleventy](https://www.11ty.dev/)
 - Vanilla JS and CSS
 
 ## Themes
@@ -23,7 +23,7 @@ You can switch between them by changing the `data-theme` variable from default *
 ## Features
 - [Eleventy](https://www.11ty.dev/) for static site generation
 - Nunjucks for templating
-- Static [Tags](https://www.11ty.dev/docs/collections/)
+- Static [tags](https://www.11ty.dev/docs/collections/)
 - SEO base template can be found in `src/data/site.json`
 - Frontmatter property: `Icon` use Segoe UI Emoji inspired by Notion style
 - Frontmatter property: `public` can be set to `True` or `False` depending on whether you would like to make it visible to your timeline

@@ -51,7 +51,7 @@ body {
 footer {
 	margin: 0 auto;
 	max-width: 500px;
-	padding-bottom: 1em;
+	padding-bottom: 1.5em;
 	text-align: center;
 	color: var(--footer);
 	padding-top: 2em;
