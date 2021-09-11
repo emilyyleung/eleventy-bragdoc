@@ -6,7 +6,9 @@
   "dependencies": {
     "@11ty/eleventy": "^0.12.1"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "gh-pages": "^3.2.3"
+  },
   "scripts": {
     "start": "eleventy --serve",
     "build": "eleventy",

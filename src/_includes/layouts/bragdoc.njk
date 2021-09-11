@@ -1,21 +1,22 @@
 ---
 layout: layouts/base.njk
-title: home
 ---
 
-{% include 'partials/site-head.html' %}
-
 <div class="bragdoc__section" id="bragdoc__section">
+    
+    {% include 'partials/site-head.html' %}
 
     <div class="bragdoc__container">
         
         <div class="bragdoc__profile">
-            <img class="bragdoc__photo" src="https://www.bragdocs.com/rails/active_storage/representations/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBZWM9IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--2b9ac2ffdf2849716d6d7949133cb06f36e7b7ab/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCam9MY21WemFYcGxTU0lOTVRJNGVERXlPQ0VHT2daRlZBPT0iLCJleHAiOm51bGwsInB1ciI6InZhcmlhdGlvbiJ9fQ==--9d3c73224951bb0df8d39da8761829336c1fd385/2021-01-14-113239261.jpg">
+            <img class="bragdoc__photo" src="{{ '/images/profile_picture.jpg' | url }}">
             <h1 class="bragdoc__name">Emily Y Leung</h1>
             <div class="role">Computational Designer</div>
         </div>
 
     	{% for post in collections.posts | reverse %}
+
+        {% if post.data.public %}
 
         <div class="bragdoc__entry">
             <div class="bragdoc__entry-milestone"></div>
@@ -31,10 +32,20 @@ title: home
                 </div>
             </div>
 
+            <div class="bragdoc__taglist">
+            {% for tag in post.data.categories %}
+                <span># {{tag}}</span>
+            {%- endfor %}
+            </div>
+
         </div>
+
+        {%- endif %}
 
         {%- endfor %}
 
     </div>
+
+    {% include 'partials/site-foot.html' %}
 
 </div>

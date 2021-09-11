@@ -1,6 +1,6 @@
 ---
-date: 2015-03-02
-name: Bachelor of Computational Design
+date: 2018-02-26
+name: Bachelor of Computational Design (Honours)
 icon: ✏
 public: True
 categories:

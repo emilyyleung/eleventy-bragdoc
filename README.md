@@ -6,6 +6,8 @@ Built using:
 - [11ty](https://www.11ty.dev/)
 - Vanilla JS and CSS
 
+Built on top of the timeline by [venkatesh](https://codepen.io/venkat06) - [codepen here](https://codepen.io/venkat06/pen/yLBeVqZ?editors=0100)
+
 ## Dependencies
 Install dependencies by running `npm install`
 

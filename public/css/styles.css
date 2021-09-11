@@ -14,6 +14,8 @@
 	--quote-block-edge: rgba(255, 165, 0, 0.5);
 	--quote-block-text: #676a6c;
 	--table-border: #676a6c;
+	--footer: #BDBDBD;
+	--tag: #BDBDBD;
 }
 
 html[data-theme="dark"] {
@@ -32,6 +34,8 @@ html[data-theme="dark"] {
 	--quote-block-edge: rgb(255, 165, 0);
 	--quote-block-text: rgba(255, 165, 0,0.5);
 	--table-border: #999999;
+	--footer: rgba(255,255,255,0.3);
+	--tag: rgba(255,255,255,0.3);
 }
 
 body {
@@ -40,6 +44,17 @@ body {
 	color: var(--text);
 	overflow-x: hidden;
 	background-color: var(--background);
+	margin: 0;
+	height: 100vh;
+}
+
+footer {
+	margin: 0 auto;
+	max-width: 500px;
+	padding-bottom: 1em;
+	text-align: center;
+	color: var(--footer);
+	padding-top: 2em;
 }
 
 /* Bragdoc Logo */
@@ -54,7 +69,11 @@ body {
 /* Bragdoc Body */
 
 .bragdoc__section {
-	padding-bottom: 5em;
+	height: 100%;
+	display: grid;
+	grid-template-rows: auto 1fr auto;
+	margin: 0;
+	padding: 0;
 }
 
 /* Bragdoc User Profile */
@@ -81,8 +100,12 @@ body {
 
 .bragdoc__container {
 	max-width: 800px;
-	margin: 0 auto;
-	padding-bottom: 10rem;
+
+	/* Centre the Bragdoc*/
+	/*margin: 0 auto; */
+	margin: 0 0 0 30em;
+	
+	padding-bottom: 15em;
 }
 
 .bragdoc__profile-role {
@@ -163,7 +186,19 @@ body {
 
 /* Make it responsive */
 
-@media only screen and (max-width: 880px) {
+@media only screen and (max-width: 1400px) {
+
+	.bragdoc__container {
+		/* Centre the Bragdoc*/
+		margin: 0 auto;
+	}
+
+	.bragdoc__entry-block h2 {
+		font-size: 1.2em;
+	}
+}
+
+@media only screen and (max-width: 800px) {
 
 	.bragdoc__container {
 		padding-left: 2em;
@@ -254,4 +289,16 @@ th {
 	border-top: 1px solid var(--table-border);
 	border-left: 1px solid var(--table-border);
 	border-right: 1px solid var(--table-border);
+}
+
+.bragdoc__taglist {
+	margin-left: 1em;
+	padding: 1em;
+}
+
+.bragdoc__taglist > * {
+	border: 1px solid var(--tag);
+	padding: 0.25em 0.5em 0.25em 0.5em;
+	border-radius: 0.5em;
+	margin-right: 1em;
 }
