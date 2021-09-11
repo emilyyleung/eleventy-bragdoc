@@ -1,6 +1,6 @@
 # eleventy-bragdoc
 
-A starter site for building your own [brag document](https://jvns.ca/blog/brag-documents/), using 11ty (demo). Inspired by Julia Evans. Bragdoc design by Jonny Burch and Neil Cameron at [bragdocs.com](bragdocs.com).
+A starter site for building your own [brag document](https://jvns.ca/blog/brag-documents/), using [11ty](https://www.11ty.dev/) ([demo](https://emilyyleung.github.io/eleventy-bragdoc)). Inspired by [Julia Evans](https://jvns.ca/) . Bragdoc design by Jonny Burch and Neil Cameron at [bragdocs.com](bragdocs.com).
 
 Built using:
 - [11ty](https://www.11ty.dev/)
@@ -30,3 +30,6 @@ npm run-script build
 # Push the content on Github Pages
 npm run deploy
 ```
+
+## License
+This project is open source and available under the [MIT License](https://github.com/emilyyleung/eleventy-bragdoc/blob/main/LICENSE)

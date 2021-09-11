@@ -5,27 +5,32 @@ title: home
 
 {% include 'partials/site-head.html' %}
 
-<div class="ibox-content" id="ibox-content">
+<div class="bragdoc__section" id="bragdoc__section">
 
-    <div id="vertical-timeline" class="vertical-container dark-timeline ">
+    <div class="bragdoc__container">
+        
+        <div class="bragdoc__profile">
+            <img class="bragdoc__photo" src="https://www.bragdocs.com/rails/active_storage/representations/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBZWM9IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--2b9ac2ffdf2849716d6d7949133cb06f36e7b7ab/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCam9MY21WemFYcGxTU0lOTVRJNGVERXlPQ0VHT2daRlZBPT0iLCJleHAiOm51bGwsInB1ciI6InZhcmlhdGlvbiJ9fQ==--9d3c73224951bb0df8d39da8761829336c1fd385/2021-01-14-113239261.jpg">
+            <h1 class="bragdoc__name">Emily Y Leung</h1>
+            <div class="role">Computational Designer</div>
+        </div>
 
     	{% for post in collections.posts | reverse %}
 
-        <div class="vertical-timeline-block">
-            <div class="vertical-timeline-icon navy-bg">
-            	<div class="blob"></div>
-            </div>
+        <div class="bragdoc__entry">
+            <div class="bragdoc__entry-milestone"></div>
 
-            <div class="vertical-timeline-content">
-                <span class="vertical-date">
-                    <small>{{ post.data.date | dateDisplay }}</small>
+            <div class="bragdoc__entry-block">
+                <span class="bragdoc__entry-date">
+                    {{ post.data.date | dateDisplay }}
                 </span>
                 <br/>
-                <h2><b>{{ post.data.icon }} {{ post.data.name }}</b></h2>
-                <div class="postcontent">
-                {{ post.templateContent | safe }}
+                <h2 class="bragdoc__entry-title"><span class="bragdoc__icon">{{ post.data.icon }}</span> {{ post.data.name }}</h2>
+                <div class="bragdoc__entry-content">
+                    {{ post.templateContent | safe }}
                 </div>
             </div>
+
         </div>
 
         {%- endfor %}

@@ -1,99 +1,142 @@
-body {
-	font-family: "open sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-	background-color: #fff;
-	font-size: 13px;
-	color: #676a6c;
-	overflow-x: hidden;
+:root, html[data-theme="light"] {
+	--logo: black;
+	--name: black;
+	--entry-title: black;
+	--date: #BDBDBD;
+	--text: #676a6c;
+	--entry-line: #f1f1f1;
+	--entry-circle: #ddd;
+	--background: white;
+	--text-code: grey;
+	--code-block: rgba(0,0,0,0.05);
+	--link-text: #676a6c;
+	--link-hover: orange;
+	--quote-block-edge: rgba(255, 165, 0, 0.5);
+	--quote-block-text: #676a6c;
+	--table-border: #676a6c;
 }
 
-.ibox-content {
+html[data-theme="dark"] {
+	--logo: #FFF;
+	--name: #FFF;
+	--entry-title: #dedede;
+	--date: rgba(255,255,255,0.3);
+	--text: #999999;
+	--entry-line: rgba(255,255,255,0.2);
+	--entry-circle: rgba(255,255,255,0.3);
+	--background: #121212;
+	--code-text: rgba(255,255,255,0.5);
+	--code-block: rgba(255,255,255,0.1);
+	--link-text: rgba(255,255,255,0.5);
+	--link-hover: orange;
+	--quote-block-edge: rgb(255, 165, 0);
+	--quote-block-text: rgba(255, 165, 0,0.5);
+	--table-border: #999999;
+}
+
+body {
+	font-family: "open sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 13px;
+	color: var(--text);
+	overflow-x: hidden;
+	background-color: var(--background);
+}
+
+/* Bragdoc Logo */
+
+.bragdoc__header {
+	margin: 0;
+	padding: 1em;
+	font-size: 1.5em;
+	color: var(--logo)
+}
+
+/* Bragdoc Body */
+
+.bragdoc__section {
 	padding-bottom: 5em;
 }
 
-img {
-	width: 100%;
-	padding-top: 1em;
-	padding-bottom: 1em;
+/* Bragdoc User Profile */
+
+.bragdoc__profile {
+	padding-top: 3em;
+	padding-bottom: 2em;
 }
 
-a {
-	color: grey;
-}
-
-a:hover {
-	color: purple;
-}
-
-blockquote {
-	border-left: 3px solid purple;
-	padding-left: 1em;
-	line-height: 2em;
-	font-style: italic;
-}
-
-blockquote > p {
-	margin-bottom: 1em;
+.bragdoc__photo {
+	width: 8em;
+	border-radius: 100%;
 	padding: 0;
 }
 
-pre > code {
-	display: inline-block; 
-    width: 100px; /* Whatever. The <code>'s width will change */
-	font-family: 'Roboto Mono', monospace;
-	padding: 1em;
+.bragdoc__name {
+	color: var(--name);
+	margin-bottom: 0.25em;
 }
 
-pre {
-	background: rgba(0,0,0,0.05);
-	color: grey;
-	display: block;
-	font-size: 0.9em;
-	overflow-x: auto;
+.bragdoc__icon {
+	font-family: "Segoe UI Emoji", Times, serif;
 }
 
-p > code {
-	padding: 0.3em;
-	color: grey;
-}
-
-
-
-.vertical-container {
+.bragdoc__container {
 	max-width: 800px;
 	margin: 0 auto;
-	padding-top: 10rem;
 	padding-bottom: 10rem;
 }
 
-.vertical-timeline-block {
+.bragdoc__profile-role {
+	margin: 0;
+}
+
+/* Individual Bragdoc Entry Blocks */
+
+.bragdoc__entry {
 	position: relative;
 }
 
-.vertical-timeline-block:first-child {
+.bragdoc__entry:first-child {
 	margin-top: 0;
 }
 
-.vertical-timeline-block:before {
+.bragdoc__entry:before {
 	height: 100%;
 	position: absolute;
-	left: 0;
-	background-color: #f1f1f1;
-	color: orange;
+	background-color: var(--entry-line);
 	width: 2px;
 	content: "";
 	top: 30px;
 }
 
-.vertical-timeline-block:last-child {
+.bragdoc__entry:last-child {
 	height: 0;
 }
 
-.blob {
+/* Entry Content */
+
+.bragdoc__entry-block {
+	margin-left: 1em;
+	padding: 1em;
+}
+
+.bragdoc__entry-block h2 {
+	margin-top: 4px;
+	color: var(--entry-title);
+}
+
+.bragdoc__entry-date {
+	line-height: 3em;
+	color: var(--date);
+}
+
+/* Bragdoc milestone circle */
+
+.bragdoc__entry-milestone {
 	position: absolute;
 	height: 5px;
 	width: 5px;
-	border: 2px solid #ddd;
-	background-color: #fff;
+	border: 2px solid var(--entry-circle);
+	background-color: var(--background);
 	left: 0;
 	top: 30px;
 	margin-top: -2px;
@@ -101,70 +144,114 @@ p > code {
 	border-radius: 100px;
 }
 
-.vertical-timeline-content {
-	position: relative;
-	/*margin-left: 60px;*/
-	margin-left: 2em;
-	background: white;
-	border-radius: 0.25em;
-	padding: 1em;
+/* Bragdoc Entry Content */
+
+.bragdoc__entry-content > * {
+	margin-bottom: 0.5em;
+	margin-left: 0;
 }
 
-/* test */
-.vertical-timeline-content:last-child {
-	/*padding-bottom: 5em;*/
+.bragdoc__entry-content > h1 {
+	font-size: 1.2em;
 }
 
-.vertical-timeline-content h2 {
-	font-weight: 400;
-	margin-top: 4px;
-	color: black;
+.bragdoc__entry-content > h2, h3, h4, h5, h6 {
+	font-size: 1em;
+	padding-bottom: 0.5em;
+	color: var(--text);
 }
 
-.vertical-timeline-content .vertical-date {
-	/*float: left;*/
-	/*font-weight: 500;*/
-	line-height: 3em;
-}
+/* Make it responsive */
 
-.vertical-date small {
-	color: rgba(0,0,0,0.25);
-	font-weight: 400;
-}
+@media only screen and (max-width: 880px) {
 
-@media only screen and (max-width: 768px) {
-	.vertical-container {
+	.bragdoc__container {
 		padding-left: 2em;
 		padding-right: 2em;
 	}
 
-	.vertical-timeline-content h2 {
+	.bragdoc__entry-block h2 {
 		font-size: 1.2em;
 	}
-
 }
 
-.postcontent > * {
-	/*margin: 0;*/
-	margin-bottom: 0.5em;
-	margin-left: 0;
-	/*padding-top: 0.75em;*/
-}
+/* Everything else */
 
-.postcontent > h1 {
-	font-size: 1.2em;
-}
-
-.postcontent > h2, h3, h4, h5, h6 {
-	font-size: 1em;
-	padding-bottom: 0.5em;
-}
-
-.postcontent > ul {
+ul {
 	margin: 0;
 	padding-left: 1em;
 }
 
-.postcontent > ul li li {
+ul li {
 	list-style: disc;
+}
+
+p > img {
+	width: 100%;
+	padding-top: 1em;
+	padding-bottom: 1em;
+}
+
+p > a {
+	color: var(--link-text);
+}
+
+p > a:hover {
+	color: var(--link-hover);
+}
+
+blockquote {
+	border-left: 3px solid var(--quote-block-edge);
+	padding-left: 1em;
+	line-height: 2em;
+	font-style: italic;
+	width: 100%
+}
+
+blockquote > p {
+	color: var(--quote-block-text);
+}
+
+pre > code {
+	display: inline-block; 
+	width: 100px;
+	font-family: 'Roboto Mono', monospace;
+	padding: 1em;
+}
+
+pre {
+	background: var(--code-block);
+	color: var(--code-text);
+	display: block;
+	font-size: 0.9em;
+	overflow-x: auto;
+}
+
+table, 
+td, 
+th {
+	border-collapse: collapse;
+    padding:0.5em;
+}
+
+table {
+	margin-top: 1em;
+	padding: 0;
+	display: block;
+	overflow-x: auto;
+}
+
+td, th {
+	min-width: 100px;
+	text-align: left;
+}
+
+td {
+    border: 1px solid var(--table-border);
+}
+
+th {
+	border-top: 1px solid var(--table-border);
+	border-left: 1px solid var(--table-border);
+	border-right: 1px solid var(--table-border);
 }
