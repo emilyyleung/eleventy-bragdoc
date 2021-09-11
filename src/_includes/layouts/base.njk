@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en" data-theme="light">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>{{ title }}</title>
+    <title>{{ title }} by Emily Y Leung</title>
     <link rel="stylesheet" href="{{ '/css/styles.css' | url }}">
 
     <link rel="apple-touch-icon" sizes="180x180" href="{{ '/images/favicon_io/apple-touch-icon.png' | url }}">
@@ -21,6 +21,8 @@
 
       gtag('config', 'G-QHTYKWLREY');
     </script>
+
+    {% include "partials/site-meta-head.njk" %}
   </head>
   <body>
     {{ content | safe }}

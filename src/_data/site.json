@@ -1,0 +1,13 @@
+{
+  "name": "11ty x Bragdoc",
+  "description": "Eleventy theme inspired by Julia Evan's Brag Document. Original Bragdocs design by Jonny Burch and Neil Cameron.",
+  "url": "https://emilyyleung.github.io",
+  "baseUrl": "/eleventy-bragdoc/",
+  "author": {
+    "handle": "@emily_y_leung",
+    "name": "Emily Y Leung"
+  },
+  "images": {
+    "twitter": "light-theme.jpg"
+  }
+}

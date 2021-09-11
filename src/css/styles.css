@@ -212,6 +212,14 @@ footer {
 
 /* Everything else */
 
+a {
+	color: var(--link-text);
+}
+
+a:hover {
+	color: var(--link-hover);
+}
+
 ul {
 	margin: 0;
 	padding-left: 1em;
@@ -225,14 +233,6 @@ p > img {
 	width: 100%;
 	padding-top: 1em;
 	padding-bottom: 1em;
-}
-
-p > a {
-	color: var(--link-text);
-}
-
-p > a:hover {
-	color: var(--link-hover);
 }
 
 blockquote {
