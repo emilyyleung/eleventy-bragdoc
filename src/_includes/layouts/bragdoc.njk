@@ -14,35 +14,15 @@ layout: layouts/base.njk
             <div class="role">Computational Designer</div>
         </div>
 
-    	{% for post in collections.posts | reverse %}
+    	{%- for post in collections.posts | reverse -%}
 
         {% if post.data.public %}
 
-        <div class="bragdoc__entry">
-            <div class="bragdoc__entry-milestone"></div>
+        {%- include 'partials/bragdoc-entry.njk' -%}
 
-            <div class="bragdoc__entry-block">
-                <span class="bragdoc__entry-date">
-                    {{ post.data.date | dateDisplay }}
-                </span>
-                <br/>
-                <h2 class="bragdoc__entry-title"><span class="bragdoc__icon">{{ post.data.icon }}</span> {{ post.data.name }}</h2>
-                <div class="bragdoc__entry-content">
-                    {{ post.templateContent | safe }}
-                </div>
-            </div>
+        {%- endif -%}
 
-            <div class="bragdoc__taglist">
-            {% for tag in post.data.categories %}
-                <span># {{tag}}</span>
-            {%- endfor %}
-            </div>
-
-        </div>
-
-        {%- endif %}
-
-        {%- endfor %}
+        {%- endfor -%}
 
     </div>
 
