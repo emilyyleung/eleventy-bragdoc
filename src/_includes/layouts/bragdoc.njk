@@ -14,15 +14,15 @@ layout: layouts/base.njk
             <div class="role">Computational Designer</div>
         </div>
 
-    	{%- for post in collections.posts | reverse -%}
+    	{% for post in collections.posts | reverse %}
 
         {% if post.data.public %}
 
-        {%- include 'partials/bragdoc-entry.njk' -%}
+        {% include 'partials/bragdoc-entry.njk' %}
 
-        {%- endif -%}
+        {% endif %}
 
-        {%- endfor -%}
+        {% endfor %}
 
     </div>
 

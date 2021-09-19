@@ -104,8 +104,6 @@ footer {
 	/* Centre the Bragdoc*/
 	/*margin: 0 auto; */
 	margin: 0 0 0 30em;
-	
-	padding-bottom: 15em;
 }
 
 .bragdoc__profile-role {
@@ -131,8 +129,8 @@ footer {
 	top: 30px;
 }
 
-.bragdoc__entry:last-child {
-	height: 0;
+.bragdoc__entry:last-child:before {
+	background-color: var(--background);
 }
 
 /* Entry Content */
@@ -170,7 +168,7 @@ footer {
 /* Bragdoc Entry Content */
 
 .bragdoc__entry-content > * {
-	margin-bottom: 0.5em;
+	/*margin-bottom: 0.5em;*/
 	margin-left: 0;
 }
 
@@ -229,7 +227,7 @@ ul li {
 	list-style: disc;
 }
 
-p > img {
+img, p > img {
 	width: 100%;
 	padding-top: 1em;
 	padding-bottom: 1em;
@@ -293,7 +291,8 @@ th {
 
 .bragdoc__taglist {
 	margin-left: 1em;
-	padding: 1em;
+	padding-left: 1em;
+	padding-bottom: 1em;
 }
 
 .bragdoc__taglist > * {
