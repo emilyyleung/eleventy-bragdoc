@@ -8,5 +8,3 @@ categories:
 ---
 
 UNSW - Faculty of Built Environment
-
-<img class="" src="{{ '/images/profile_picture.jpg' | url }}">
