@@ -55,6 +55,8 @@ footer {
 	text-align: center;
 	color: var(--footer);
 	padding-top: 2em;
+
+	margin-top: 2em;
 }
 
 /* Bragdoc Logo */
@@ -87,6 +89,9 @@ footer {
 	width: 8em;
 	border-radius: 100%;
 	padding: 0;
+	
+	height: 8em;
+	object-fit: cover;
 }
 
 .bragdoc__name {
@@ -100,10 +105,11 @@ footer {
 
 .bragdoc__container {
 	max-width: 800px;
-
 	/* Centre the Bragdoc*/
 	/*margin: 0 auto; */
 	margin: 0 0 0 30em;
+
+	height: 100%;
 }
 
 .bragdoc__profile-role {
@@ -168,7 +174,7 @@ footer {
 /* Bragdoc Entry Content */
 
 .bragdoc__entry-content > * {
-	/*margin-bottom: 0.5em;*/
+	margin-bottom: 0.5em;
 	margin-left: 0;
 }
 
@@ -196,7 +202,7 @@ footer {
 	}
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 870px) {
 
 	.bragdoc__container {
 		padding-left: 2em;
@@ -229,8 +235,11 @@ ul li {
 
 img, p > img {
 	width: 100%;
-	padding-top: 1em;
-	padding-bottom: 1em;
+	/*padding-top: 1em;*/
+	/*padding-bottom: 1em;*/
+
+	margin-bottom: 1em;
+	margin-top: 1em;
 }
 
 blockquote {
@@ -291,8 +300,10 @@ th {
 
 .bragdoc__taglist {
 	margin-left: 1em;
-	padding-left: 1em;
-	padding-bottom: 1em;
+	/*padding-left: 1em;*/
+	/*padding-bottom: 1em;*/
+
+	padding: 1em;
 }
 
 .bragdoc__taglist > * {
