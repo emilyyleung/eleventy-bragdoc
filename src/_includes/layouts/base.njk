@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>{{ title }}</title>
+    <title>{{ data.name }}</title>
     <link rel="stylesheet" href="{{ '/css/styles.css' | url }}">
 
     <link rel="apple-touch-icon" sizes="180x180" href="{{ '/images/favicon_io/apple-touch-icon.png' | url }}">
@@ -26,5 +26,20 @@
   </head>
   <body>
     {{ content | safe }}
+    <script>
+      (function () {
+        const links = document.querySelectorAll("a[href^='https://'], a[href^='http://']")
+        const host = window.location.hostname
+
+        const isInternalLink = link => new URL(link).hostname === host
+
+        links.forEach(link => {
+          if (isInternalLink(link)) return
+
+          link.setAttribute("target", "_blank")
+          link.setAttribute("rel", "noopener")
+        })
+      })()
+    </script>
   </body>
 </html>

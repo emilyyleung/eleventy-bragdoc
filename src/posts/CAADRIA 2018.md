@@ -13,4 +13,4 @@ categories:
 
 **School of Architecture**
 
-<a target="_blank" href="http://papers.cumincad.org/cgi-bin/works/paper/caadria2018_122">Redback BIM: Developing 'De-Localised' Open-Source Architecture-Centric Tools</a>
+[Redback BIM: Developing 'De-Localised' Open-Source Architecture-Centric Tools](http://papers.cumincad.org/cgi-bin/works/paper/caadria2018_122)
