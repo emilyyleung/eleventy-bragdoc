@@ -1,13 +1,18 @@
 {
-  "name": "11ty x Bragdocs",
-  "description": "Eleventy theme inspired by Julia Evan's Brag Document. Original Bragdocs design by Jonny Burch and the team at Progression.app.",
-  "url": "https://emilyyleung.github.io",
-  "baseUrl": "/eleventy-bragdoc/",
-  "author": {
-    "handle": "@emily_y_leung",
-    "name": "Emily Y Leung"
-  },
-  "images": {
-    "twitter": "https://i.imgur.com/ewfT3Xg.jpg"
-  }
+    "site":
+    {
+        "name": "11ty x Bragdocs",
+        "description": "Eleventy theme inspired by Julia Evan's Brag Document. Original Bragdocs design by Jonny Burch and the team at Progression.app.",
+        "url": "https://emilyyleung.github.io",
+        "baseUrl": "/eleventy-bragdoc/",
+        "author":
+        {
+            "handle": "@emily_y_leung",
+            "name": "Emily Y Leung"
+        },
+        "images":
+        {
+            "twitter": "https://i.imgur.com/ewfT3Xg.jpg"
+        }
+    }
 }
