@@ -1,5 +1,8 @@
 module.exports = function (eleventyConfig) {
 
+	// https://www.npmjs.com/package/eleventy-plugin-metagen
+	eleventyConfig.addPlugin(require('eleventy-plugin-metagen'))
+
 	// Add filters to Nunjucks
 	eleventyConfig.addFilter("dateDisplay", require("./src/_filters/dates.js") );
 	

@@ -4,7 +4,8 @@
   "description": "Eleventy theme based on Bragdoc by Jonny Burch and the team at Progression.app",
   "main": "index.js",
   "dependencies": {
-    "@11ty/eleventy": "^0.12.1"
+    "@11ty/eleventy": "^0.12.1",
+    "eleventy-plugin-metagen": "^1.5.2"
   },
   "devDependencies": {
     "gh-pages": "^3.2.3"
