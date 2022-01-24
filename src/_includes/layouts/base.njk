@@ -1,10 +1,29 @@
+---
+eleventyComputed:
+  url_long: '{{ data.url }}{{ data.baseUrl }}'
+  title_long: '{{ data.author }} / {{ data.name }}'
+  metagen: 
+    title: '{{ data.name }}'
+    name: '{{ data.author }}'
+    desc: '{{ data.description | safe }}'
+    generator: 'eleventy'
+    comments: true
+    url: '{{ url_long }}'
+    site_name: '{{ title_long }}'
+    og_title: '{{ title_long }}'
+    img: '{{ data.img }}'
+    img_alt: '{{ data.author }}'
+    twitter_card_type: 'summary_large_image'
+    twitter_handle: '{{ data.twitter_handle }}'
+    twitter_title: '{{ title_long }}'
+---
 <!DOCTYPE html>
 <html lang="en" data-theme="light">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>{{ data.name }}</title>
+<!-- eleventy plugin metagen -->
+{% metagen metagen %}
+{% include "partials/site-meta-head.njk" %}
+
     <link rel="stylesheet" href="{{ '/css/styles.css' | url }}">
 
     <link rel="apple-touch-icon" sizes="180x180" href="{{ '/images/favicon_io/apple-touch-icon.png' | url }}">
@@ -21,8 +40,6 @@
 
       gtag('config', 'G-QHTYKWLREY');
     </script>
-
-    {% include "partials/site-meta-head.njk" %}
   </head>
   <body>
     {{ content | safe }}
