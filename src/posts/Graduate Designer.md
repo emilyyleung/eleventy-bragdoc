@@ -7,4 +7,4 @@ categories:
   - Career
 ---
 
-Cox Architecture
+Cox Architecture where I focused on helping to streamline parts of the design process
